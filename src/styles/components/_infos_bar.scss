@@ -1,6 +1,8 @@
+@use '../variables';
+
 .infos-bar {
   padding: 1rem;
-  background-color: #fff;
+  background-color: variables.$textColor;
   border-radius: 6px;  
   margin: 0 auto;
   display: flex;
@@ -13,10 +15,10 @@
 
     &__item {
       font-size: .8rem;
-      color: #000;
+      color: variables.$colorSecundary;
       
       b {
-        color: #000;
+        color: variables.$colorSecundary;
         font-size: 1.4rem;
         display: block;
         align-items: center;
@@ -37,7 +39,4 @@
       }
     }
   }
-
-  
-
 }

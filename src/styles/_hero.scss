@@ -1,43 +1,57 @@
+@use 'variables';
+
 .hero {
   padding-top: 4rem;
   padding-bottom: 100px;
-  background-image: linear-gradient(380deg,rgba(0 0 0 / .4), transparent, black), url(../images/headImage.jpg);
+  background-image: linear-gradient(380deg,rgba(0 0 0 / .4), transparent, variables.$colorSecundary), url(../images/headImage.jpg);
   background-repeat: no-repeat;
   background-size: cover; 
   background-position: center;
   width: 100%;
   height: 100vh;
 
- &__text {   
-  padding-top: 6rem;
-  font-size: 4rem;  
-  font-weight: 800;
-  text-align: center;
- }
+  .container {
+    max-width: 960px;
+    width: 100%;   
+    margin: 0 auto;
+  
+    @media (max-width: 640px) {
+      max-width: 80%;
+    }
+  
+    @media (max-width: 1024px) {
+      max-width: 90%;
+    }
+  }
 
- &__description {
-  font-size: 1.4rem;
-  font-weight: 600;
-  text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
- }
-
- @media (max-width: 640px) {
-  padding: 3rem;
-
-  &__text {
-    font-size: 1.8rem;
-    line-height: 1.6rem;
-    margin: 1rem;
+  &__text {   
+    padding-top: 6rem;
+    font-size: 4rem;  
+    font-weight: 800;
+    text-align: center;
   }
 
   &__description {
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 600;
     text-align: center;
     padding-top: 3rem;
-   }
+    padding-bottom: 3rem;
+  }
 
- }
+  @media (max-width: 640px) {
+    padding: 3rem;
+    &__text {
+      font-size: 1.8rem;
+      line-height: 1.6rem;
+      margin: 1rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      padding-top: 3rem;
+    }
+  }
 }

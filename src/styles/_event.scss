@@ -1,0 +1,96 @@
+@use 'variables';
+
+.event {
+  color: variables.$textColor;   
+  padding-top: 2rem;
+
+  &--box {
+    background-image: linear-gradient(90deg, variables.$colorParties1, variables.$colorParties1, variables.$textColor);
+  }  
+
+  .container { 
+    display: flex;
+    flex-direction: column; 
+    margin: 0 auto;
+    width: 75%;
+    gap: 2rem;
+    padding-top: 2rem;   
+
+    &__cake {
+      display: flex;
+      padding-bottom: 5rem ;     
+    }
+
+    &__candy {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-bottom: 5rem ;
+      gap: 4rem;
+    }
+
+    &__drinks {
+      display: flex;
+      padding-bottom: 5rem ;
+    }
+
+    &__savory {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-bottom: 5rem ;
+      gap: 4rem;
+    }
+  }
+
+  &__image {
+    border-radius: 6px;
+    height: 280px;
+    width: 340px;
+  }
+
+  &__details {    
+    text-align: center;    
+        
+    &__title {
+      font-size: 2rem;
+      font-weight: bold;      
+      margin-bottom: 1rem;
+      width: 80%;
+    }
+
+    &__description {
+      line-height: 1.4;
+      padding-bottom: 1rem;
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .container {
+      display: flex;
+      width: 90%;      
+
+      &__cake, &__candy, &__drinks, &__savory {
+        display: block;
+      }     
+    }    
+
+    &__details {
+      margin-right: 0;
+      margin-right: 0;
+      margin-bottom: 1rem;
+      
+      &__title {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        padding-bottom: 1rem;        
+      }
+  
+      &__description {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+      }
+    }
+  } 
+}
